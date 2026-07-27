@@ -1,0 +1,144 @@
+# =============================================================================
+# MediAI Pro — Root Monorepo .gitignore
+# Covers: root, /client, /server
+# =============================================================================
+
+# =============================================================================
+# A. ENVIRONMENT & SECRET FILES
+# =============================================================================
+
+# Root-level environment files
+.env
+.env.*
+!.env.example
+
+# Client environment files
+client/.env
+client/.env.*
+!client/.env.example
+
+# Server environment files
+server/.env
+server/.env.*
+!server/.env.example
+
+# Certificate and key files (if ever added)
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+
+# =============================================================================
+# B. DEPENDENCIES & BUILD ARTIFACTS
+# =============================================================================
+
+# Node modules (all locations)
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Vite production build output
+client/dist/
+client/dist-ssr/
+client/.vite/
+
+# Server build output (if ever added)
+server/dist/
+server/build/
+
+# =============================================================================
+# C. LOGS, CACHE, TEMP FILES
+# =============================================================================
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Lint artifacts (specific to this project)
+client/dashboard_lint.json
+client/lint_output.txt
+client/lint_results.txt
+
+# ESLint cache
+.eslintcache
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Temp and cache directories
+.cache/
+.temp/
+.tmp/
+
+# =============================================================================
+# D. USER-GENERATED & RUNTIME DATA
+# =============================================================================
+
+# User-uploaded files (profile images, medical record attachments)
+uploads/
+server/uploads/
+
+# Local database dumps
+*.sqlite
+*.sqlite3
+dump.rdb
+*.dump
+
+# =============================================================================
+# E. TESTING & COVERAGE
+# =============================================================================
+
+coverage/
+.nyc_output/
+
+# =============================================================================
+# F. EDITOR & OS FILES
+# =============================================================================
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+
+# JetBrains IDEs
+.idea/
+
+# Cursor
+.cursor/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Vim swap files
+*.swp
+*.swo
+*~
+
+# =============================================================================
+# G. DEPLOYMENT-SPECIFIC
+# =============================================================================
+
+# Vercel
+.vercel/
+
+# Netlify
+.netlify/
+
+# Serverless Framework
+.serverless/
+
+# CI/CD local cache
+.github/workflows/cache/
